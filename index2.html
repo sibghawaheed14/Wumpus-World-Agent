@@ -232,7 +232,6 @@ function initGame() {
   }
   grid[wr][wc].wumpus = true;
 
-  // Place gold (not at 0,0 or on hazard)
   var gr, gc;
   for (var j = 0; j < 500; j++) {
     gr = randInt(ROWS); gc = randInt(COLS);
@@ -245,7 +244,6 @@ function initGame() {
   // Place agent at start
   agent = { r: 0, c: 0 };
 
-  // Pre-compute percepts for every cell
   for (var r = 0; r < ROWS; r++) {
     for (var c = 0; c < COLS; c++) {
       var p = { breeze: false, stench: false, glitter: grid[r][c].gold };
