@@ -167,12 +167,10 @@ var percepts  = {};
 
 
 
-// Unique string key for a cell
 function cellKey(r, c) {
   return r + '_' + c;
 }
 
-// Return valid adjacent cells
 function getNeighbors(r, c) {
   var result = [];
   if (r > 0)       result.push([r - 1, c]);
@@ -182,7 +180,6 @@ function getNeighbors(r, c) {
   return result;
 }
 
-// Random int from 0 to max-1
 function randInt(max) {
   return Math.floor(Math.random() * max);
 }
